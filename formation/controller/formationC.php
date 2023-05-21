@@ -108,36 +108,26 @@ try{ $recipesStatement = $db->prepare($sqlc);
 
 } 
 
-function Ajouterformations($format){
-$sql= "INSERT INTO `formations` VALUES (:id,:nom, :dat, :prix,:nbr,:dure,:image,:emp,:id_type,:desce,:pos,:neg)";
-$db=config::getConnexion();
-try{ $recipesStatement = $db->prepare($sql);
-	$recipesStatement->execute([ 'id'=>$format->getid_formation(),
-		            'nom' =>$format->getnom(),
-		              'dat'=>$format->getdate(),
-		            'prix'=>$format->getprix(),
-		           
-		            'nbr'=>$format->getnombre_place(),
-		                'dure' =>$format->getduree(),
-		                   'image'=>$format->getimage(),
-		           
-		            'emp'=>$format->getemplacement(),
-		                'id_type'=>$format->getid_type(),
-		'desce'=>$format->getDesc(),
+function Ajouterformations($format) {
+    $sql = "INSERT INTO `formations` (`nom`, `prix`, `nbr_place`, `image`) VALUES (:nom, :prix, :nbr_place, :image)";
+    $db = config::getConnexion();
 
- 'pos'=>0,
-		'neg'=>0,
+    try {
+        $statement = $db->prepare($sql);
+        $statement->execute([
+            'nom' => $format->getnom(),
+            'prix' => $format->getprix(),
+            'nbr_place' => $format->getnombre_place(),
+            'image' => $format->getimage()
+        ]);
 
-	]);
- }
- catch(Exception $e){ 
- 	
-			 die("erreur:".$e->getMessage());
-
+        echo "L'envoi a bien été effectué !";
+    } catch(Exception $e) { 
+        die("Erreur : ".$e->getMessage());
+    }
 }
-	
 
-}
+
 function triparprix(){
 		$sql="SELECT * FROM formations order by prix ";
 		$db=config::getConnexion();

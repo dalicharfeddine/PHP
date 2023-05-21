@@ -44,7 +44,8 @@ if($x==1)
 }
 else if($x==2)
 {
-$ser=new utilisateur($a,$_POST['nom'],$_POST['prenom'],$_POST['email'],$_POST['mdp'],"participent");
+
+$ser = new utilisateur('', $_POST['nom'], $_POST['prenom'], $_POST['email'], $_POST['mdp'], "utilisateur");
 
 
 

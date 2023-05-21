@@ -23,10 +23,6 @@ class utilisateur{
         $this->mdp=$mdp;
         $this->role=$role;
 
-
-
-
-
     }
 
 

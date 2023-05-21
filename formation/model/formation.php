@@ -6,28 +6,22 @@ private $nom;
 private $date;
 
 private $prix;
-private $nombre_place;
+private $nbr_place;
 private $duree;
 private $image;
 private $emplacement;
 private $id_type;
 private $Desc;
-public  function __construct($id_formation,$nom,$date,$prix,$nombre_place,$duree,$image,$emplacement,$id_type,$Desc)
+public  function __construct($nom,$prix,$nbr_place,$image)
 {
-	$this->id_formation=$id_formation;
     $this->nom=$nom;
-    $this->date=$date;
 
     $this->prix=$prix;
-    $this->nombre_place=$nombre_place;
-        $this->duree=$duree;
+    $this->nbr_place=$nbr_place;
 
     $this->image=$image;
 
-   $this->emplacement=$emplacement;
 
-    $this->id_type=$id_type;
- $this->Desc=$Desc;
 
 }
 
@@ -54,7 +48,7 @@ public function getprix()
 }
 public  function getnombre_place()
 {
-   return $this->nombre_place;
+   return $this->nbr_place;
 }
 public function getduree()
 {

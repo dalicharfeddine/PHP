@@ -26,7 +26,7 @@ foreach($prod as $pro){
             ];
               $_SESSION['LOGGED_USER'] = $loggedUser['email'];
                 $_SESSION['role'] =1;
-                  header('location:http://localhost/may/view/back/index.php');
+                  header('location:http://localhost/may/view/back');
 	  }
     else if($pro['role']=="Formateur")
     {

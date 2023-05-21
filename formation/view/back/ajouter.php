@@ -3,7 +3,7 @@ include_once '../../config.php';
 include_once '../../controller/formationC.php';
 include_once '../../model/formation.php';
 
-if(!isset($_POST['id_formation'])||!isset($_POST['nom'])||!isset($_POST['date'])||!isset($_POST['prix'])||!isset($_POST['nbr'])||!isset($_POST['duree'])||!isset($_POST['theme'])||!isset($_POST['emplacement'])||!isset($_POST['desce']))
+if(!isset($_POST['nom'])||!isset($_POST['prix'])||!isset($_POST['nbr_place']))
 {
 	echo "erreur de ";
 }
@@ -31,7 +31,7 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0)
 
 
 
-$ser=new formation($_POST['id_formation'],$_POST['nom'],$_POST['date'],$_POST['prix'],$_POST['nbr'],$_POST['duree'],$_FILES['image']['name'],$_POST['emplacement'],$_POST['theme'],$_POST['desce']);
+$ser = new formation($_POST['nom'], $_POST['prix'], $_POST['nbr_place'], $_FILES['image']['name']);
 
 
 

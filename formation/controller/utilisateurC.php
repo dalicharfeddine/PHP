@@ -113,29 +113,25 @@ try{ $recipesStatement = $db->prepare($sqlc);
 }
 
 } 
-function Ajouterutilisateur($ser){
-$sql= "INSERT INTO `utilisateur` VALUES (:id,:nom, :prenom,:adrs,:mdp,:rol)";
-$db=config::getConnexion();
-try{ $recipesStatement = $db->prepare($sql);
-	$recipesStatement->execute([   'id'=>$ser->getid_utilisateur(), 
+function Ajouterutilisateur($ser) {
+$sql = "INSERT INTO utilisateur (nom, prenom, adresse, mdp) VALUES (:nom, :prenom, :adresse, :mdp)";
+    $db = config::getConnexion();
 
-		'nom' =>$ser->getnom(),
-		'prenom' =>$ser->getprenom(),
-		'adrs' =>$ser->getadresse(),
-		'mdp' =>$ser->getmdp(),
-
-'rol' =>$ser->getrole(),
-
-
-	]);
- }
- catch(Exception $e){ 
- 	
-			 die("erreur:".$e->getMessage());
-
+    try {
+        $statement = $db->prepare($sql);
+        $statement->execute([
+            'nom' => $ser->getnom(),
+            'prenom' => $ser->getprenom(),
+            'adresse' => $ser->getadresse(),
+            'mdp' => $ser->getmdp(),
+        ]);
+        
+        echo "Utilisateur ajouté avec succès !";
+    } catch(Exception $e) { 
+        die("Erreur : ".$e->getMessage());
+    }
 }
 
-}
 
 function recherche($search_value)
     {

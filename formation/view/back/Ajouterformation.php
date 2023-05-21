@@ -167,102 +167,35 @@ $prod=$type->affichertype();
 
                                         </button>
                                         <hr>
-  '<script>
-          function check(){
+  <form name="frm" action="ajouter.php" method="post" novalidate="novalidate" enctype="multipart/form-data">
 
-                  var nomR=document.frm.nom.value;
-                      var letters = /^[A-Za-z]+$/;
-              if (!(nomR.match(letters) && nomR.charAt(0).match(/^[A-Z]+$/))){
-                  document.getElementById("msg").innerHTML="Entrez uniquement Le premier chiffre en MAJ";
-                  return false;
-              }else{
-                  return true;
-              }
-          }
-       </script>'
-                                        <form name="frm" action="ajouter.php" method="post" novalidate="novalidate" enctype="multipart/form-data" onsubmit="return check()" >
+    <div class="form-group">
+        <label>Nom</label>
+        <input type="text" class="form-control" name="nom">
+    </div>
 
-                                            <div class="form-group">
+    <div class="form-group">
+        <label>Prix</label>
+        <input type="number" class="form-control" name="prix">
+    </div>
 
-                                                <input type="hidden" class="form-control" name="id_formation" >
-                                            </div>
-                                            <div class="form-group">
-                                                <label >Nom</label>
-                                                <input type="text" class="form-control" name="nom" >
-                                                 <span id="msg" style="color:red"></span></th>
+    <div class="form-group">
+        <label>Nombre de place</label>
+        <input type="number" class="form-control" name="nbr_place">
+    </div>
 
-                                            </div>
-                                                     <div class="form-group">
-                                                <label >Prix</label>
-                                                <input type="number" class="form-control" name="prix" >
+    <div class="form-group">
+        <label>Description</label>
+        <input type="text" class="form-control" name="desce">
+    </div>
 
-                                            </div>
-                                            <div class="form-group">
-                                                <label >Date</label>
-                                                <input type="date" class="form-control" name="date">
-                                            </div>
-                                              <div class="form-group">
-                                                <label >Nombre de place</label>
-                                                <input type="number" class="form-control" name="nbr"  >
-                                            </div>
-                                               <div class="form-group">
-                                                <label >Duree par mois</label>
-                                                <input type="number" class="form-control" name="duree">
-                                            </div>
-                                            <div class="form-group">
-                                                <label >Image</label>
-                                                <input type="file" class="form-control" name="image"  >
-                                            </div>
+    <div class="form-group">
+        <label>Image</label>
+        <input type="file" class="form-control" name="image">
+    </div>
 
-
-            <div>
-                 <label > Theme Type </label>
-      <select name="theme" >
-
-                    <?php
-foreach($prod as $caa){
-?>
-       <option value="<?php echo $caa['id_type'] ?>"><?php echo $caa['theme'] ?>--<?php echo $caa['type'] ?></option>
-         <?php
-         } ?>
-         </select><br><p id="errorCAT" class="error"></p>
-       </div>
-                       <div class="form-group">
-
-                                                   <label>Emplacement ou lien meet </label>
-
-  <input type="text" class="form-control" name="emplacement">
-
-                                            </div>
-               <div class="form-group">
-                                                <label > description</label>
-                                                <input type="text" class="form-control" name="desce"  >
-                                            </div>
-
-                              <div class="form-group">
-
-
-                                            </div>
-
-
-
-
-
-                                                <div>
-                                                    <button type="button" class="btn btn-primary btn-lg"  style="margin-top:3%;margin-left:5%;border-radius: 5%;">
-                                                        <a href="Ajouterformation.php"> Ajouter Formation</a>
-
-                                                    </button>
-                                                </div>
-                                        </form>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div> <!-- .card -->
-
-                    </div>
-                    <!--/.col-->
+    <button type="submit" class="btn btn-primary">Ajouter Formation</button>
+</form>
 
 
 
