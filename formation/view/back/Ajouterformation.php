@@ -72,7 +72,7 @@ $prod=$type->affichertype();
 
                             <li><i class="fa fa-table"></i><a href="table_type.php">Type</a></li>
 
-                            <li><i class="fa fa-table"></i><a href="Ajouterformation.php">Formation</a></li>
+                            <li><i class="fa fa-table"></i><a href="Ajouterformation.php">medicament</a></li>
                               <li><i class="fa fa-table"></i><a href="table-participent.php">Participent</a></li>
                                <li><i class="fa fa-table"></i><a href=" table-favorie.php">Favorie</a></li>
                         </ul>
@@ -194,7 +194,7 @@ $prod=$type->affichertype();
         <input type="file" class="form-control" name="image">
     </div>
 
-    <button type="submit" class="btn btn-primary">Ajouter Formation</button>
+    <button type="submit" class="btn btn-primary">Ajouter Medicament</button>
 </form>
 
 

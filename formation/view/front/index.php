@@ -68,7 +68,7 @@ https://templatemo.com/tm-569-edu-meeting
                       <!-- ***** Menu Start ***** -->
                  <ul class="nav">
                           <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                          <li><a href="meetings.PHP">Formation</a></li>
+                          <li><a href="meetings.PHP">medicament</a></li>
                           <li class="scroll-to-section"><a href="#apply">Apply Now</a></li>
                           <li class="has-sub">
                               <a href="javascript:void(0)">Connecte</a>
@@ -120,7 +120,7 @@ https://templatemo.com/tm-569-edu-meeting
               <div class="col-lg-12">
                 <div class="caption">
               <h6>Hello Students</h6>
-              <h2>Welcome to Education</h2>
+              <h2>Welcome to our pharmacy</h2>
               <p>This is an edu meeting HTML CSS template provided by <a rel="nofollow" href="https://templatemo.com/page/1" target="_blank">TemplateMo website</a>. This is a Bootstrap v5.1.3 layout. The video background is taken from Pexels website, a group of young people by <a rel="nofollow" href="https://www.pexels.com/@pressmaster" target="_blank">Pressmaster</a>.</p>
               <div class="main-button-red">
                   <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
@@ -154,7 +154,7 @@ https://templatemo.com/tm-569-edu-meeting
                 <img src="assets/images/service-icon-02.png" alt="">
               </div>
               <div class="down-content">
-                <h4>Best Teachers</h4>
+                <h4>Best medecin</h4>
                 <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
               </div>
             </div>
@@ -672,13 +672,13 @@ https://templatemo.com/tm-569-edu-meeting
                 <div class="col-12">
                   <div class="count-area-content percentage">
                     <div class="count-digit">94</div>
-                    <div class="count-title">Succesed Students</div>
+                    <div class="count-title">Succesed doctor</div>
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="count-area-content">
                     <div class="count-digit">126</div>
-                    <div class="count-title">Current Teachers</div>
+                    <div class="count-title">Current medecin</div>
                   </div>
                 </div>
               </div>
@@ -688,7 +688,7 @@ https://templatemo.com/tm-569-edu-meeting
                 <div class="col-12">
                   <div class="count-area-content new-students">
                     <div class="count-digit">2345</div>
-                    <div class="count-title">New Students</div>
+                    <div class="count-title">New doctors</div>
                   </div>
                 </div> 
                 <div class="col-12">
